@@ -2,8 +2,8 @@
 
 A web application built with Python and Streamlit that provides an interactive graphical user interface (GUI) for encrypting and decrypting text using various classical and modern cryptographic algorithms. This project is designed for educational purposes to demonstrate how these ciphers work.
 
-![Cryptography Toolkit Documentation](Cryptography_Toolkit_Document.docx)
-
+![Cryptography Toolkit Documentation]
+https://github.com/Zahidaslam786/Cryptography-Toolkit/blob/main/Cryptography_Toolkit_Document.docx
 
 ## Features 
 
