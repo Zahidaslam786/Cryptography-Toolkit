@@ -1,51 +1,78 @@
-Classical Cryptography Toolkit
+# Cryptography Toolkit - Python & Streamlit
 
-This is a web application built with Python and Streamlit that provides a graphical user interface (GUI) for encrypting and decrypting text using various classical ciphers.
+A web application built with Python and Streamlit that provides an interactive graphical user interface (GUI) for encrypting and decrypting text using various classical and modern cryptographic algorithms. This project is designed for educational purposes to demonstrate how these ciphers work.
 
-Features
+![Cryptography Toolkit Screenshot](screenshots/screenshot.png)
+*(Make sure you upload your screenshot to a folder named `screenshots` for this image link to work)*
 
-Monoalphabetic Ciphers: Caesar, Affine
+## Features 
 
-Polyalphabetic Ciphers: Vigenere, Playfair, Hill
+The toolkit includes implementations of the following algorithms:
 
-Transposition Ciphers: Rail Fence, Row Transposition
+* **Classical Ciphers (Substitution):**
+    * Caesar Cipher
+    * Affine Cipher
+* **Classical Ciphers (Polyalphabetic):**
+    * Vigenere Cipher
+    * Playfair Cipher
+    * Hill Cipher (2x2 and 3x3)
+* **Classical Ciphers (Transposition):**
+    * Rail Fence Cipher
+    * Row Transposition Cipher
+* **Mechanical Ciphers:**
+    * Rotor Machine (Enigma-like simulation)
+* **Modern Block Ciphers:**
+    * DES (Data Encryption Standard) - *Implemented from scratch for educational demonstration.*
+    * AES (Advanced Encryption Standard) - *Using the secure `pycryptodome` library with GCM mode.*
 
-Mechanical Ciphers: An Enigma-like Rotor Machine simulation
+The application provides explanations, formulas, and visualizations (where applicable) for each algorithm.
 
-The application provides a clean interface for selecting ciphers, entering keys, and processing text, along with explanations and visualizations for each algorithm.
+## Setup Instructions ⚙️
 
-How to Run
+Follow these steps to set up and run the project locally:
 
-Prerequisites: Make sure you have Python installed on your system.
+1.  **Clone or Download:** Get the project files onto your computer.
+2.  **Create and Activate a Virtual Environment:**
+    (Recommended to keep dependencies isolated)
+    ```bash
+    # Navigate into the project folder
+    cd Cryptography_App
 
-Set up a Virtual Environment (Recommended):
+    # Create the environment
+    python -m venv venv
 
-## --> Create the environment
-python -m venv venv
+    # Activate it:
+    # On Windows (cmd/powershell):
+    .\venv\Scripts\activate
+    # On macOS/Linux:
+    source venv/bin/activate
+    ```
+3.  **Install Dependencies:**
+    Install the required Python libraries using the `requirements.txt` file. Make sure your virtual environment is active first.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# Activate it
-## --> On Windows:
-.\venv\Scripts\activate
+## Running the Application 🚀
 
-# On macOS/Linux:
-<!-- source venv/bin/activate -->
+1.  Make sure your virtual environment is activated (you should see `(venv)` in your terminal prompt).
+2.  Navigate to the project's root directory (`Cryptography_App/`) in your terminal.
+3.  Run the Streamlit application:
+    ```bash
+    streamlit run app.py
+    ```
+4.  Streamlit will automatically open the application in your default web browser. If not, open your browser and go to the local URL provided in the terminal (usually `http://localhost:8501`).
 
+## Important Security Note ⚠️
 
-## --> Install Dependencies:
-From the project's root directory (Cryptography_Toolkit_App/), run the following command to install the required libraries:
+* The **DES** implementation included here is built from scratch primarily for educational purposes to show the internal steps. **DES is considered insecure and should NOT be used for protecting real data.**
+* The **AES** implementation uses the reputable `pycryptodome` library and the secure GCM mode, which is suitable for real-world use *if managed correctly* (key management, etc.).
+* The classical ciphers (Caesar, Vigenere, Playfair, etc.) are **not secure** by modern standards and are included only for historical and educational context.
 
-pip install -r requirements.txt
+This project is intended for learning and demonstration, not for production-level security applications.
 
-
-# --> Run the Streamlit App:
-Once the dependencies are installed, run the main application file:
-
-streamlit run app.py
-
-
-Open your web browser and navigate to the local URL provided in the terminal (usually http://localhost:8501).
-
-#### For once:
+......................................................................................................
+#### For Running please enter this below all Commands on terminal one by one :
 python -m venv venv
 
 ./venv/Scripts/python.exe -m pip install -r requirements.txt
@@ -58,3 +85,6 @@ python -m venv venv
 ### For AES Algorithm Install new libraray
 
 ./venv/Scripts/python.exe -m pip install pycryptodome   
+
+
+........................................................................................................
